@@ -87,6 +87,7 @@ function App() {
     const uniqueLetters = [...new Set(letters)];
     if (guessedLetters.length === uniqueLetters.length) {
       setScore((actualScore) => actualScore += 1);
+      setGuesses((actualGuesses) => actualGuesses += 1)
       startGame();
     }
   }, [guessedLetters, letters, startGame])
